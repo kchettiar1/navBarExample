@@ -1,5 +1,4 @@
 /* CSS Resets */
-
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -45,6 +44,12 @@ ul {
   padding-left: 0;
 }
 
+/* Utilities Classes */
+
+.hidden {
+  display: none;
+}
+
 /* Local styles */
 /* Navbar */
 .navbar {
@@ -55,15 +60,20 @@ ul {
 }
 
 .brand {
-  align-self: center;
+  /* align-self: center; */
   font-size: 1rem;
-  font-weight: 400;
   padding: 1rem;
   margin: 0;
+}
+
+.brand h1 {
+  font-weight: 400;
 }
 .nav-items ul {
   display: flex;
   justify-content: center;
+  margin: 0;
+  height: 100%;
 }
 
 .nav-items li {
@@ -75,16 +85,34 @@ ul {
 
 .menu-toggle {
   align-self: center;
+  font-size: 2rem;
   padding: 1rem;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  .nav-items {
-    display: none;
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-items ul {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .nav-items li {
+    justify-content: flex-start;
+    width: 100%;
+    border-bottom: 1px black solid;
   }
 }
+
 @media (min-width: 769px) {
-  .menu-toggle{
+  .nav-items {
+    display: initial;
+  }
+  .menu-toggle {
     display: none;
   }
 }
