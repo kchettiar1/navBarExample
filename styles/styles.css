@@ -96,7 +96,6 @@ ul {
   .navbar {
     flex-direction: column;
   }
-
   .nav-items ul {
     justify-content: flex-start;
     flex-direction: column;
@@ -104,10 +103,10 @@ ul {
   .nav-items li {
     justify-content: flex-start;
     border-bottom: 1px black solid;
+    margin-bottom: 5px;
   }
-
   .nav-items a {
-    width: 100vw
+    display: block;
   }
 }
 
